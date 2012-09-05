@@ -36,6 +36,9 @@ class NGram(object):
     def size(self):
         return sum(len(self.data[k]) for k in self.data)
 
+    def __str__(self):
+        return "NGram(%d)" % self.n
+
 def _test():
     import doctest
     doctest.testmod()
